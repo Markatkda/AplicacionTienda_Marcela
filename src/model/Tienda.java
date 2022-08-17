@@ -1,8 +1,11 @@
 package model;
 
 import model.enums.TipoPersona;
+import model.subclasses.Juridica;
+import model.subclasses.Natural;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Tienda {
 
@@ -51,5 +54,30 @@ public class Tienda {
         this.listaClientes = listaClientes;
     }
 
+
+    //CRUDS----------------------------------------------------
+
+
+    //CRUD Cliente
+
+    public boolean crearCliente (TipoPersona tipoPersona, String nombre, String direccion, String doc, String telefono, String email, String contrasenia, Date fechaNacimiento){
+
+        if (tipoPersona==null) throw new NullPointerException("El tipo de persona es Nulo");
+
+        if (tipoPersona == TipoPersona.NATURAL){
+
+
+
+            Natural clienteNatural = new Natural(nombre, direccion, doc, telefono, email, contrasenia, fechaNacimiento);
+            this.listaClientes.add(clienteNatural);
+
+
+        } else {
+
+            Juridica clienteJuridico ()
+        }
+
+        return true;
+    }
 
 }

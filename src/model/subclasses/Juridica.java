@@ -1,6 +1,7 @@
 package model.subclasses;
 
 import model.Cliente;
+import model.enums.TipoPersona;
 
 public class Juridica extends Cliente {
 
@@ -10,6 +11,12 @@ public class Juridica extends Cliente {
 
     public Juridica(String nit, String id_tributaria) {
         super();
+        this.nit = nit;
+        this.id_tributaria = id_tributaria;
+    }
+
+    public Juridica(String nombre, String direccion, String documento, String telefono, String email, String contrasenia, String nit, String id_tributaria) {
+        super(nombre, direccion, documento, TipoPersona.JURIDICA, telefono, email, contrasenia);
         this.nit = nit;
         this.id_tributaria = id_tributaria;
     }

@@ -13,6 +13,11 @@ public class Perecedero extends Producto {
         this.fechaVencimiento = fechaVencimiento;
     }
 
+    public Perecedero(String nombre, String codigo, int existencias, double valorUnitario, Date fechaVencimiento) {
+        super(nombre, codigo, existencias, valorUnitario);
+        this.fechaVencimiento = fechaVencimiento;
+    }
+
     public Date getFechaVencimiento() {
         return fechaVencimiento;
     }

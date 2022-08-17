@@ -12,6 +12,17 @@ public class Refrigerado extends Producto {
         super(nombre, codigo, existencias, valorUnitario);
     }
 
+    public Refrigerado(String nombre, String codigo, int existencias, double valorUnitario, String codigoAprobacion, double tempRefigeracion) {
+        super(nombre, codigo, existencias, valorUnitario);
+        this.codigoAprobacion = codigoAprobacion;
+        this.tempRefigeracion = tempRefigeracion;
+    }
+
+    public Refrigerado(String codigoAprobacion, double tempRefigeracion) {
+        this.codigoAprobacion = codigoAprobacion;
+        this.tempRefigeracion = tempRefigeracion;
+    }
+
     public String getCodigoAprobacion() {
         return codigoAprobacion;
     }

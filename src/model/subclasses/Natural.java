@@ -1,6 +1,7 @@
 package model.subclasses;
 
 import model.Cliente;
+import model.enums.TipoPersona;
 
 import java.util.Date;
 
@@ -12,6 +13,12 @@ public class Natural extends Cliente {
 
 
     public Natural(String email, Date fechaNacimiento) {
+        this.email = email;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Natural(String nombre, String direccion, String documento, String telefono, String email, String contrasenia, Date fechaNacimiento) {
+        super(nombre, direccion, documento, TipoPersona.NATURAL, telefono, email, contrasenia);
         this.email = email;
         this.fechaNacimiento = fechaNacimiento;
     }

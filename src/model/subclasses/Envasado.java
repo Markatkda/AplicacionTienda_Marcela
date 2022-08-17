@@ -17,6 +17,12 @@ public class Envasado extends Producto {
         this.pesoEnvase = pesoEnvase;
     }
 
+    public Envasado(String nombre, String codigo, int existencias, double valorUnitario, Date fechaEnvasado, double pesoEnvase) {
+        super(nombre, codigo, existencias, valorUnitario);
+        this.fechaEnvasado = fechaEnvasado;
+        this.pesoEnvase = pesoEnvase;
+    }
+
     public Date getFechaEnvasado() {
         return fechaEnvasado;
     }
