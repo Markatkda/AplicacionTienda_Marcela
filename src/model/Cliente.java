@@ -9,7 +9,7 @@ public class Cliente {
     private String nombre;
     private String direccion;
     private String documento;
-    private TipoPersona tipoPersona; //Puede ser NATURAL O JURIDICA.
+    private TipoPersona tipoPersona;   //Puede ser NATURAL O JURIDICA.
     private String telefono;
     private String email;
     private String contrasenia;
@@ -22,6 +22,8 @@ public class Cliente {
         this.telefono = telefono;
         this.email = email;
         this.contrasenia = contrasenia;
+
+        if (this.tipoPersona == TipoPersona.JURIDICA.get)
     }
 
     public Cliente() {
