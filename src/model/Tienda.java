@@ -1,6 +1,8 @@
 package model;
 
+import exceptions.NegativeNumberException;
 import exceptions.StringNuloOrVacioException;
+import model.enums.PaisOrigen;
 import model.enums.TipoProducto;
 import utilities.MyUtils;
 
@@ -170,8 +172,15 @@ public class Tienda {
     // CRUD PRODUCTO
 
 
-    public void crearProducto (String codigo, String nombre, int existencias, double valorUnitario, TipoProducto tipoProducto){
+    public void crearProducto (String codigo, String nombre, int existencias, double valorUnitario, TipoProducto tipoProducto, String codigoAprobacion, double tempRefrigeracion, Date fechaEnvasado, double pesoEnvase, PaisOrigen paisOrigen, Date fechaVencimiento) throws StringNuloOrVacioException, NegativeNumberException {
 
+        if (tipoProducto == null) throw new NullPointerException("El tipo de producto es Nulo");
+        MyUtils.validarSiNuloOrVacio(codigo, nombre);
+        MyUtils.validarSiPositivo(existencias, valorUnitario);
+
+        if (tipoProducto == TipoProducto.ENVASADO) {
+
+        }
 
     }
 
